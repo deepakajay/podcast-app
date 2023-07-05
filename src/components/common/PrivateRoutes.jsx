@@ -3,6 +3,7 @@ import {useAuthState} from 'react-firebase-hooks/auth'
 import { auth } from '../../firebase'
 import MainLoader from './Loader/MainLoader';
 import { Navigate, Outlet } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const PrivateRoutes = () => {
     const [user, loading, error] = useAuthState(auth);
