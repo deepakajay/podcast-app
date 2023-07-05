@@ -6,6 +6,7 @@ import { auth, db } from '../firebase';
 import { toast } from 'react-toastify';
 import Button from '../components/common/Button/Button';
 import EpisodeDetails from '../components/common/Podcasts/EpisodeDetails/EpisodeDetails';
+import Player from '../components/common/Player/Player';
 
 const PodcastDetails = () => {
     const {id} = useParams();
@@ -56,8 +57,12 @@ const PodcastDetails = () => {
                 <>
                 <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', width:'100%'}}>
                     <h1 style={{textAlign:'left', width:'100%'}}>{podcast.title}</h1>
-                    {podcast.createdBy == auth.currentUser.uid && (
+                    {auth.currentUser  && podcast.createdBy == auth.currentUser.uid && (<>
                         <Button width='200px' text={"Create Episodes"} onClick={()=>{navigate(`/podcast/${id}/create-episode`)}}/>
+                        <Button width='200px' text={"Edit Podcast"} onClick={()=>{navigate(`/podcast/${id}/edit-podcast`)}}/>
+                    </>
+                        
+                        
                     )}
                     
                 </div>
@@ -68,7 +73,7 @@ const PodcastDetails = () => {
                 <p className='podcast-description'>{podcast.description}</p>
                 <h1 style={{textAlign:'left', width:'100%'}}>Episodes</h1>
                 {episodes.length>0 ? <>{episodes.map((episode, index)=>{
-                    return <EpisodeDetails key={index} index={index + 1} title={episode.title} description={episode.description} audioFile={episode.audioFile} onClick={(file)=>console.log("Playing file", file)}/>
+                    return <EpisodeDetails key={index} index={index + 1} title={episode.title} description={episode.description} audioFile={episode.audioFile}/>
                 })}</> : <><h1>No Episodes</h1></>}
                 </>
                 

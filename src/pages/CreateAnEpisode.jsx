@@ -41,6 +41,7 @@ const CreateAnEpisode = () => {
         setTitle("");
         setDescription("");
         setAudioFile(null);
+        console.log("Episode uploaded");
         navigate(`/podcast/${id}`)
         
       } catch (error) {
@@ -61,7 +62,7 @@ const CreateAnEpisode = () => {
           <Input type="text" state={title} setState={setTitle} placeholder="Enter Title" required={true}/>
         <Input type="text" state={description} setState={setDescription} placeholder="Enter Description" required={true}/>
         <label>Upload File</label>
-        <input type="file" state={audioFile} onChange={(e)=> setAudioFile(e.target.files[0])} required={true} className='custom-input'/>
+        <input type="file" onChange={(e)=> setAudioFile(e.target.files[0])} required={true} className='custom-input'/>
         <Button text={isLoading ? "Loading.." : "Submit"} disabled = {isLoading} onClick={handleSubmit}/>
       </div>
     </div>

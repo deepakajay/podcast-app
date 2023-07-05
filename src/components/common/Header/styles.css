@@ -37,3 +37,8 @@
 .active {
     color : var(--white) !important;
 }
+.app-name{
+    font-family: fantasy;
+    color: #f56600;
+    font-size: larger;
+}

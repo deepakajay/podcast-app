@@ -14,9 +14,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--theme);
+  
   color: var(--white);
 }
-
+.App{
+  background-image: url('https://www.onlygfx.com/wp-content/uploads/2021/12/old-microphone-6107.png');
+  background-size: 30%; /* Adjust the percentage to control the size */
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  background-position: top left;
+  /* Adjust the height as needed */
+}
 input {
   font-family: 'Inter', sans-serif;
 }
@@ -67,4 +75,17 @@ a{
   color: var(--purple-grey);
   text-align: left;
   width: 100%;
+}
+.mainloader {
+  display: flex; 
+position: fixed; 
+top: 0;
+right: 0;
+bottom: 0;
+left: 0; 
+z-index: 50; 
+justify-content: center; 
+align-items: center; 
+width: 100%; 
+backdrop-blur: blur(12px); 
 }
