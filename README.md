@@ -1,11 +1,11 @@
-###Podcast Platform App
+#Podcast Platform App
 Overview
 This Podcast Platform App is a web-based application built using ReactJS, Redux, and Firebase. It allows users to browse and listen to podcasts across various genres, create their own podcast channels, manage episodes, and seamlessly update content.
 
-Live Link
+#Live Link
 You can access the live version of the app here. https://podcast-app-e7f0c.web.app/podcasts
 
-Features
+#Features
 Browse and Listen: Users can explore a wide range of podcasts spanning different genres and enjoy seamless listening experiences.
 
 User Account Creation: Enable users to create their personalized podcast channels within the app, providing a platform for content creators to share their voice.
@@ -14,7 +14,7 @@ Episode Management: A robust episode management system allows users to add new e
 
 Seamless Updates: Podcast creators can effortlessly update their podcasts with new content, ensuring their audience always receives fresh episodes.
 
-Technologies Used
+#Technologies Used
 Frontend: ReactJS and Redux were utilized to create an interactive and user-friendly interface.
 
 Backend: Firebase was chosen for its real-time database capabilities and user authentication.
